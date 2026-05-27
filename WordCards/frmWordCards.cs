@@ -383,8 +383,10 @@ namespace WordCards
 
                 // 儲存單字
                 _WordList.SaveToFile(strWordFile);
+
+                //顯示儲存完畢
+                MessageBox.Show("儲存成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
         }
     }
 }
