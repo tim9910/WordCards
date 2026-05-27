@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.IO;
+using System.Diagnostics;
 
 namespace WordCards
 {
@@ -31,10 +32,48 @@ namespace WordCards
         /// 是否自動播放
         /// </summary>
         bool isPlay = false;
-
+        ToolTip toolTip = null;
         public frmWordCards()
         {
             InitializeComponent();
+            toolTip = new ToolTip();
+
+            btnAutoPlay.Text = "";
+            btnAutoPlay.FlatStyle = FlatStyle.Flat;
+            btnAutoPlay.FlatAppearance.BorderSize = 0;
+            btnAutoPlay.BackColor = Color.Transparent;
+            btnAutoPlay.Cursor = Cursors.Hand;
+            btnAutoPlay.Margin = new Padding(0);
+            btnAutoPlay.Padding = new Padding(0);
+
+
+            btnAutoPlay.Image = ResizeImage(GetImage("play100"), new Size(40, 40));
+            UpdatePlayButton();
+        }
+
+        void UpdatePlayButton()
+        {
+            btnAutoPlay.MouseEnter += (s, e) =>
+            {
+                toolTip.SetToolTip(btnAutoPlay, isPlay ? "停止播放" : "開始播放");
+                string imgKey = isPlay ? "stop100" : "play100";
+                btnAutoPlay.Image = ResizeImage(GetImage(imgKey), new Size(44, 44));
+            };
+
+            btnAutoPlay.MouseLeave += (s, e) =>
+            {
+                toolTip.SetToolTip(btnAutoPlay, isPlay ? "停止播放" : "開始播放");
+                string imgKey = isPlay ? "stop100" : "play100";
+                btnAutoPlay.Image = ResizeImage(GetImage(imgKey), new Size(40, 40));
+            };
+        }
+        private Image GetImage(string name)
+        {
+            return Properties.Resources.ResourceManager.GetObject(name) as Image;
+        }
+        private Image ResizeImage(Image img, Size size)
+        {
+            return new Bitmap(img, size);
         }
 
         /// <summary>
@@ -171,6 +210,8 @@ namespace WordCards
                 return;
             }
 
+            lstWordList.DrawMode = DrawMode.OwnerDrawFixed;
+            lstWordList.ItemHeight = lstWordList.Font.Height + 3;
             // 載入單字檔
             this._WordList.LoadFromStringArray(lines);
 
@@ -222,9 +263,9 @@ namespace WordCards
             // 若目前不是自動播放
             if (isPlay == false)
             {
-                btnAutoPlay.Text = "Stop";
+                //btnAutoPlay.Text = "Stop";
                 isPlay = true;
-
+                UpdatePlayButton();
                 // 顯示並播放目前選取的單字
                 PlaySelectedWord();
 
@@ -232,9 +273,9 @@ namespace WordCards
             }
             else
             {
-                btnAutoPlay.Text = "Play";
+                //btnAutoPlay.Text = "Play";
                 isPlay = false;
-
+                UpdatePlayButton();
                 timPlayer.Stop();
             }
         }
@@ -270,6 +311,62 @@ namespace WordCards
                     break;
             }
         }
+        private void frmWordCards_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var result = MessageBox.Show("確定要關閉應用程式嗎？", "關閉確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // 取消關閉
+            }
+        }
+
+        private void lstWordList_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            Color backColor;
+
+            if (e.Index % 2 == 0)
+            {
+                backColor = Color.FromArgb(230, 230, 230);
+            }
+            else
+            {
+                backColor = Color.White;
+            }
+
+            // 如果item被選取，則使用系統的 Highlight 顏色作為背景
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                backColor = SystemColors.Highlight;
+
+            // 繪製背景
+            using (SolidBrush backgroundBrush = new SolidBrush(backColor))
+            {
+                e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
+            }
+
+            // 取得要繪製的文字
+            string text = lstWordList.Items[e.Index].ToString();
+
+            // 文字顏色
+            Color foreColor;
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            {
+                foreColor = SystemColors.HighlightText;
+            }
+            else
+            {
+                foreColor = lstWordList.ForeColor;
+            }
+
+            using (SolidBrush textBrush = new SolidBrush(foreColor))
+            {
+                e.Graphics.DrawString(text, e.Font, textBrush, e.Bounds);
+            }
+
+            e.DrawFocusRectangle();
+        }
 
         private void lstWordList_DoubleClick(object sender, EventArgs e)
         {
@@ -287,6 +384,7 @@ namespace WordCards
                 // 儲存單字
                 _WordList.SaveToFile(strWordFile);
             }
+            
         }
     }
 }

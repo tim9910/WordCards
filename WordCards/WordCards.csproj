@@ -95,6 +95,8 @@
     <None Include="Resources\WordCards_Logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\play100.png" />
+    <None Include="Resources\stop100.png" />
     <Content Include="Sound\A\A-list.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

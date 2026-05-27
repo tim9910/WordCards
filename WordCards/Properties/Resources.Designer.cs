@@ -63,6 +63,26 @@ namespace WordCards.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap play100 {
+            get {
+                object obj = ResourceManager.GetObject("play100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap stop100 {
+            get {
+                object obj = ResourceManager.GetObject("stop100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap WordCards_Logo {
             get {
                 object obj = ResourceManager.GetObject("WordCards_Logo", resourceCulture);
