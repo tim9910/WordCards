@@ -387,6 +387,11 @@ namespace WordCards
                 //顯示儲存完畢
                 MessageBox.Show("儲存成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                // saveButton 沒有被按下，顯示取消訊息
+                MessageBox.Show("取消編輯。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
