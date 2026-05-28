@@ -17,12 +17,13 @@
 
 |      功能       |   圖示  |     功能說明           |
 |-----------------|---------|------------------------|
-|**發音播放**     | ![播放](https://github.com/tim9910/tim9910.github.io/blob/main/images/wavplayer/play.png) |點擊播放按鈕可播放單字發音  |
-|**發音停止**     | ![停止播放](https://github.com/tim9910/tim9910.github.io/blob/main/images/wavplayer/stop.png) |點擊停止按鈕可停止單字發音  |
-|**單字切換**     | ![單字切換](https://github.com/tim9910/tim9910.github.io/blob/main/images/wordcards/enter.png) |使用 Enter 鍵切換至下一個單字或點選左側清單進行切換  |
-|**單字編輯**     |  |在左側單字列表中雙擊（Double Click）單字，即可載入並顯示詳細內容進行編輯。 |
-|**重複播放**     | ![重複播放](https://github.com/tim9910/tim9910.github.io/blob/main/images/wordcards/spacekey.png) |按 Space 鍵重複播放目前單字發音  |
+|**發音播放**     | ![播放](https://github.com/tim9910/tim9910.github.io/blob/main/images/wavplayer/play.png) |點擊**播放**按鈕可播放單字發音  |
+|**發音停止**     | ![停止播放](https://github.com/tim9910/tim9910.github.io/blob/main/images/wavplayer/stop.png) |點擊**停止**按鈕可停止單字發音  |
 |**按鈕互動效果** |  |滑鼠移到按鈕會放大，移開會變回原來大小。會切換播放或停止的圖示。  |
+|**單字切換**     | ![單字切換](https://github.com/tim9910/tim9910.github.io/blob/main/images/wordcards/enter.png) |使用 Enter 鍵切換至下一個單字或點選左側清單進行切換  |
+|**單字編輯**     |  |在左側單字列表中雙擊（Double Click）單字，即可載入並顯示詳細內容進行編輯 |
+|**重複播放**     | ![重複播放](https://github.com/tim9910/tim9910.github.io/blob/main/images/wordcards/spacekey.png) |按 Space 鍵重複播放目前單字發音  |
+
 
 ## :pushpin: 貼心輔助
 
