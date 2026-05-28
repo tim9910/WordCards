@@ -173,21 +173,6 @@ namespace WordCards
             }
         }
 
-        private void txtPhonogram_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtExplain_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void palMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frmWordCards_Load(object sender, EventArgs e)
         {
             string[] lines;

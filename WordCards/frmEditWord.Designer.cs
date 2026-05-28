@@ -49,9 +49,9 @@
             this.groupBox1.Controls.Add(this.txtWord);
             this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox1.Location = new System.Drawing.Point(24, 40);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(463, 99);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -61,7 +61,7 @@
             // 
             this.txtWord.Enabled = false;
             this.txtWord.Location = new System.Drawing.Point(7, 44);
-            this.txtWord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtWord.Name = "txtWord";
             this.txtWord.Size = new System.Drawing.Size(448, 45);
             this.txtWord.TabIndex = 1;
@@ -71,9 +71,9 @@
             this.grpPhonogram.Controls.Add(this.txtPhonogram);
             this.grpPhonogram.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grpPhonogram.Location = new System.Drawing.Point(24, 136);
-            this.grpPhonogram.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPhonogram.Margin = new System.Windows.Forms.Padding(4);
             this.grpPhonogram.Name = "grpPhonogram";
-            this.grpPhonogram.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPhonogram.Padding = new System.Windows.Forms.Padding(4);
             this.grpPhonogram.Size = new System.Drawing.Size(463, 99);
             this.grpPhonogram.TabIndex = 1;
             this.grpPhonogram.TabStop = false;
@@ -82,7 +82,7 @@
             // txtPhonogram
             // 
             this.txtPhonogram.Location = new System.Drawing.Point(7, 44);
-            this.txtPhonogram.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhonogram.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhonogram.Name = "txtPhonogram";
             this.txtPhonogram.Size = new System.Drawing.Size(448, 45);
             this.txtPhonogram.TabIndex = 0;
@@ -92,9 +92,9 @@
             this.grpSoundPath.Controls.Add(this.txtSoundPath);
             this.grpSoundPath.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grpSoundPath.Location = new System.Drawing.Point(24, 243);
-            this.grpSoundPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSoundPath.Margin = new System.Windows.Forms.Padding(4);
             this.grpSoundPath.Name = "grpSoundPath";
-            this.grpSoundPath.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSoundPath.Padding = new System.Windows.Forms.Padding(4);
             this.grpSoundPath.Size = new System.Drawing.Size(463, 99);
             this.grpSoundPath.TabIndex = 2;
             this.grpSoundPath.TabStop = false;
@@ -103,7 +103,7 @@
             // txtSoundPath
             // 
             this.txtSoundPath.Location = new System.Drawing.Point(7, 47);
-            this.txtSoundPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoundPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoundPath.Name = "txtSoundPath";
             this.txtSoundPath.Size = new System.Drawing.Size(448, 45);
             this.txtSoundPath.TabIndex = 0;
@@ -113,9 +113,9 @@
             this.grpExplain.Controls.Add(this.txtExplain);
             this.grpExplain.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grpExplain.Location = new System.Drawing.Point(24, 349);
-            this.grpExplain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpExplain.Margin = new System.Windows.Forms.Padding(4);
             this.grpExplain.Name = "grpExplain";
-            this.grpExplain.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpExplain.Padding = new System.Windows.Forms.Padding(4);
             this.grpExplain.Size = new System.Drawing.Size(463, 331);
             this.grpExplain.TabIndex = 3;
             this.grpExplain.TabStop = false;
@@ -124,7 +124,7 @@
             // txtExplain
             // 
             this.txtExplain.Location = new System.Drawing.Point(7, 47);
-            this.txtExplain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExplain.Margin = new System.Windows.Forms.Padding(4);
             this.txtExplain.Multiline = true;
             this.txtExplain.Name = "txtExplain";
             this.txtExplain.Size = new System.Drawing.Size(448, 263);
@@ -137,7 +137,7 @@
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSave.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnSave.Location = new System.Drawing.Point(373, 687);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 58);
             this.btnSave.TabIndex = 4;
@@ -157,8 +157,8 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmEditWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "編輯單字";
